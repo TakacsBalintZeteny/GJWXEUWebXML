@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<konferencia>
+
+
+<cim>
+    valami
+</cim>
+
+
+<hallgatók>
+    <hallgató>
+        <név>
+            Valaki
+        </név>
+        <lakcim>
+            valami
+        </lakcim>
+    </hallgató>
+</hallgatók>
+
+
+<helyszin>
+    valahol
+</helyszin>
+
+
+<előadó>
+    <név>
+        Dr. Valaki
+    </név>
+    <adószám>
+        valamennyi
+    </adószám>
+    <lakcim>
+        valami
+    </lakcim>
+</előadó>
+
+
+<dátum>
+    valahány
+</dátum>
+
+
+</konferencia>
