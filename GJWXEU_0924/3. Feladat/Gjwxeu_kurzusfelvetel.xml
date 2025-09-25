@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE GJWXEU_kurzusfelvetel SYSTEM "Gjwxeu_kurzusfelvetel.dtd" >
+
+<GJWXEU_kurzusfelvetel tanev="2025/26 I." egyetem="miskolci egyetem">
+
+
+    <hallgato>
+
+        <hnev>Takács Bálint Zétény</hnev>
+        <szulev>2004</szulev>
+        <szak evf="3">Mérnökinformatikus</szak>
+
+    </hallgato>
+
+
+    <kurzusok>
+
+        <kurzus id="MEIOKMUSZAN1" jovahagyas="igen" nyelv="angol">
+            <kurzusnev>Angol műszaki szaknyelv 1.</kurzusnev>
+            <kredit>0</kredit>
+            <hely>A1 / 313.</hely>
+            <idopont>Hétfő 12:00-14:00</idopont>
+            <oktato>Dobronyi Eszter</oktato>
+        </kurzus>
+
+        <kurzus id="GEVEE050-B2" jovahagyas="igen" nyelv="magyar">
+            <kurzusnev>Elektrotechnika-elektronika</kurzusnev>
+            <kredit>5</kredit>
+            <hely>III.</hely>
+            <idopont>Hétfő 08:00-10:00</idopont>
+            <oktato>Szabó Norbert István</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAK130-B2" jovahagyas="igen" nyelv="magyar">
+            <kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXXII.</hely>
+            <idopont>Kedd 10:00-12:00</idopont>
+            <!-- <oktato>Fazekas Levente Áron</oktato>  -->
+            <oraado>Valaki</oraado>
+        </kurzus>
+
+        <kurzus id="GEIAL335-B2">
+            <kurzusnev>Mobil programozási alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf. 101.</hely>
+            <idopont>Hétfő 16:00-18:00</idopont>
+            <oktato>Dr. Agárdi Anita</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAL331-B2">
+            <kurzusnev>Web technológiák 1.</kurzusnev>
+            <kredit>5</kredit>
+            <hely>V.</hely>
+            <idopont>Hétfő 10:00-12:00</idopont>
+            <oktato>Dr. Agárdi Anita</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAL32K-B2">
+            <kurzusnev>Webes adatkezelő környezetek</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf. 102.</hely>
+            <idopont>Szerda 08:00-10:00</idopont>
+            <!-- <oktato>Dr. Kovács László József</oktato> -->
+            <oraado>Valaki2</oraado>
+        </kurzus>
+
+        <kurzus id="GEIAL30A-B2">
+            <kurzusnev>Windows rendszergazda</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf. 103.</hely>
+            <idopont>Kedd 16:00-18:00</idopont>
+            <oktato>Dr. Wagner György</oktato>
+        </kurzus>
+
+        <kurzus id="ETTESME1">
+            <kurzusnev>Testnevelés 1.</kurzusnev>
+            <kredit>0</kredit>
+            <hely>-</hely>
+            <idopont>Hétfő 18:00-21:00</idopont>
+            <oktato>Kató Csaba</oktato>
+        </kurzus>
+
+    </kurzusok>
+
+
+</GJWXEU_kurzusfelvetel>
