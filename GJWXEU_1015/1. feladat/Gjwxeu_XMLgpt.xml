@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GJWXEU_Vendeglatas: XML reprezentáció az XDM modell alapján attribútumokkal -->
+<GJWXEU_Vendeglatas>
+
+  <!-- Étterem entitások (E_kod attribútummal) -->
+  <Etterem E_kod="E001">
+    <Nev>Csillag Étterem</Nev>
+    <Cim>
+      <Varos>Budapest</Varos>
+      <Utca>Fő utca</Utca>
+      <Hazszam>12</Hazszam>
+    </Cim>
+    <Csillag>4</Csillag>
+  </Etterem>
+
+  <Etterem E_kod="E002">
+    <Nev>Tenger Kincse</Nev>
+    <Cim>
+      <Varos>Siófok</Varos>
+      <Utca>Part köz</Utca>
+      <Hazszam>5</Hazszam>
+    </Cim>
+    <Csillag>3</Csillag>
+  </Etterem>
+
+  <!-- Főszakács entitások (F_kod) és kapcsolat az Étteremmel E_F attribútumban (etterem_ref E_kod) -->
+  <Foszakacs F_kod="F001" etterem_ref="E001" E_F="E_F_001">
+    <Nev>Kovács János</Nev>
+    <Eletkor>45</Eletkor>
+    <Vegzettseg>Mesterszakács</Vegzettseg>
+  </Foszakacs>
+
+  <Foszakacs F_kod="F002" etterem_ref="E002" E_F="E_F_002">
+    <Nev>Horváth Anna</Nev>
+    <Eletkor>38</Eletkor>
+    <Vegzettseg>Nemzetközi konyha</Vegzettseg>
+  </Foszakacs>
+
+  <!-- Szakács entitások (S_kod) és kapcsolat az Étterem-mel E_Sz attribútumban -->
+  <Szakacs S_kod="S001" etterem_ref="E001" E_Sz="E_Sz_001">
+    <Nev>Szalai Péter</Nev>
+    <Reszleg>Melegkonyha</Reszleg>
+    <Vegzettseg>OKJ szakács</Vegzettseg>
+  </Szakacs>
+
+  <Szakacs S_kod="S002" etterem_ref="E002" E_Sz="E_Sz_002">
+    <Nev>Nagy Márk</Nev>
+    <Reszleg>Hidegkonyha</Reszleg>
+    <Vegzettseg>Gyakorlati képzés</Vegzettseg>
+  </Szakacs>
+
+  <!-- Gyakornok entitások (G_kod) és kapcsolat az Étterem-mel E_Gy attribútumban; Gyakorlat többször előfordulhat -->
+  <Gyakornok G_kod="G001" etterem_ref="E001" E_Gy="E_Gy_001">
+    <Nev>Kiss Lilla</Nev>
+    <Muszak>Délelőtt</Muszak>
+    <Gyakorlat>
+      <Kezdete>2024-06-01</Kezdete>
+      <Idotartama>3 hónap</Idotartama>
+    </Gyakorlat>
+    <Gyakorlat>
+      <Kezdete>2024-09-01</Kezdete>
+      <Idotartama>2 hónap</Idotartama>
+    </Gyakorlat>
+  </Gyakornok>
+
+  <Gyakornok G_kod="G002" etterem_ref="E002" E_Gy="E_Gy_002">
+    <Nev>Farkas Bence</Nev>
+    <Muszak>Este</Muszak>
+    <Gyakorlat>
+      <Kezdete>2024-07-15</Kezdete>
+      <Idotartama>1 hónap</Idotartama>
+    </Gyakorlat>
+  </Gyakornok>
+
+  <!-- Vendég entitások (V_kod) -->
+  <Vendeg V_kod="V001">
+    <Nev>Molnár Éva</Nev>
+    <Eletkor>29</Eletkor>
+    <Cim>
+      <Varos>Debrecen</Varos>
+      <Utca>Ady Endre utca</Utca>
+      <Hazszam>34</Hazszam>
+    </Cim>
+  </Vendeg>
+
+  <Vendeg V_kod="V002">
+    <Nev>Rácz Gábor</Nev>
+    <Eletkor>52</Eletkor>
+    <Cim>
+      <Varos>Szeged</Varos>
+      <Utca>Kossuth Lajos sugárút</Utca>
+      <Hazszam>7</Hazszam>
+    </Cim>
+  </Vendeg>
+
+  <!-- Rendelés entitások: E_V_E1 és E_V_E2 jelöli a diagramon látható kapcsolat-diamondokat.
+       Itt attribútumokban tárolom a kapcsolatokat: vendeg_ref (V_kod), etterem_ref (E_kod).
+       Több Etel is lehet egy rendelésben (több előfordulás). -->
+  <Rendeles R_kod="R001" vendeg_ref="V001" etterem_ref="E001" E_V_E1="E_V_E1_001" E_V_E2="E_V_E2_001">
+    <Osszeg currency="HUF">6500</Osszeg>
+    <Etel>
+      <Nev>Roston csirke</Nev>
+      <Ar>2500</Ar>
+      <Mennyiseg>1</Mennyiseg>
+    </Etel>
+    <Etel>
+      <Nev>Vegyes saláta</Nev>
+      <Ar>1200</Ar>
+      <Mennyiseg>1</Mennyiseg>
+    </Etel>
+  </Rendeles>
+
+  <Rendeles R_kod="R002" vendeg_ref="V002" etterem_ref="E002" E_V_E1="E_V_E1_002" E_V_E2="E_V_E2_002">
+    <Osszeg currency="HUF">4900</Osszeg>
+    <Etel>
+      <Nev>Halászlé</Nev>
+      <Ar>1900</Ar>
+      <Mennyiseg>1</Mennyiseg>
+    </Etel>
+    <Etel>
+      <Nev>Palacsinta</Nev>
+      <Ar>800</Ar>
+      <Mennyiseg>2</Mennyiseg>
+    </Etel>
+  </Rendeles>
+
+</GJWXEU_Vendeglatas>
