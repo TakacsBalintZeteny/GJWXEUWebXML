@@ -18,6 +18,7 @@
         </xs:complexType>
 
 
+
         <!-- Kulcsok -->
          <xs:key name="etterem_kulcs">
             <xs:selector xpath="etterem"></xs:selector>
@@ -79,9 +80,29 @@
             <xs:field xpath="@e_f"></xs:field>
           </xs:unique>
           -->
+    </xs:element>
 
 
           <!-- Saját típusok (komplex) -->
+         <xs:complexType name="etteremTipus">
+            <xs:sequence>
+               <xs:element name="nev" type="xs:string"></xs:element>
+               <xs:element name="cim" type="cimTipus"></xs:element>
+               <xs:element name="csillag" type="xs:int"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="ekod" type="xs:string" use="required"></xs:attribute>
+         </xs:complexType>
+
+         <xs:complexType name="foszakacsTipus">
+            <xs:sequence>
+               <xs:element name="nev" type="xs:string"></xs:element>
+               <xs:element name="eletkor" type="xs:string"></xs:element>
+               <xs:element name="vegzettseg" type="xs:string" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="fkod" type="xs:string" use="required"></xs:attribute>
+            <xs:attribute name="e_f" type="xs:string" use="required"></xs:attribute>
+         </xs:complexType>
+
            <xs:complexType name="szakacsTipus">
                 <xs:sequence>
                     <xs:element name="nev" type="xs:string"></xs:element>
@@ -92,7 +113,7 @@
                 <xs:attribute name="e_sz" type="xs:string" use="required"></xs:attribute>
            </xs:complexType>
 
-           <xs:complexType name="gyakornok">
+           <xs:complexType name="gyakornokTipus">
                 <xs:sequence>
                     <xs:element name="nev" type="xs:string"></xs:element>
                     <xs:element name="gyakorlat" type="gyakorlatTipus"></xs:element>
@@ -101,7 +122,40 @@
                 <xs:attribute name="gykod" type="xs:string" use="required"></xs:attribute>
                 <xs:attribute name="e_gy" type="xs:string" use="required"></xs:attribute>
            </xs:complexType>
+            
+                     <xs:complexType name="gyakorlatTipus">
+                        <xs:sequence>
+                           <xs:element name="kezdete" type="xs:string"></xs:element>
+                           <xs:element name="idotartama" type="xs:string"></xs:element>
+                        </xs:sequence>
+                     </xs:complexType>
 
-    </xs:element>
+            <xs:complexType name="vendegTipus">
+               <xs:sequence>
+                  <xs:element name="nev" type="xs:string"></xs:element>
+                  <xs:element name="eletkor" type="xs:string"></xs:element>
+                  <xs:element name="cim" type="cimTipus"></xs:element>
+               </xs:sequence>
+               <xs:attribute name="vkod" type="xs:string" use="required"></xs:attribute>
+            </xs:complexType>
+
+                     <xs:complexType name="cimTipus">
+                        <xs:sequence>
+                           <xs:element name="varos" type="xs:string"></xs:element>
+                           <xs:element name="utca" type="xs:string"></xs:element>
+                           <xs:element name="hazszam" type="xs:int"></xs:element>
+                        </xs:sequence>
+                     </xs:complexType>
+
+            <xs:complexType name="rendelesTipus">
+               <xs:sequence>
+                  <xs:element name="osszeg" type="xs:int"></xs:element>
+                  <xs:element name="etel" type="xs:string"></xs:element>
+               </xs:sequence>
+               <xs:attribute name="e_v_e1" type="xs:string" use="required"></xs:attribute>
+               <xs:attribute name="e_v_e2" type="xs:string" use="required"></xs:attribute>
+            </xs:complexType>
+
+
 
 </xs:schema>
