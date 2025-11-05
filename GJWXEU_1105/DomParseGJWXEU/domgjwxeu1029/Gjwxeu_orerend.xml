@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <!DOCTYPE XY_Orarend SYSTEM "Gjwxeu_orarend.dtd"> -->
+
+<XY_Orarend xmlns:xs="http://www.w3.org/2001/XMLSchema" xs:noNamespaceSchemaLocation="Gjwxeu_orarend.xsd">
+    <ora id="MEIOKMUSZAN1" tipus="gyakorlat">
+        <targy>Angol műszaki szaknyelv 1.</targy>
+        <idopont>
+            <nap>hétfő</nap>
+            <tol>12:00:00</tol>
+            <ig>14:00:00</ig>
+        </idopont>
+        <helyszin>valahol</helyszin>
+        <oktato>valaki</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEVEE050-B2-1" tipus="elmelet">
+        <targy>Elektrotechnika-elektronika</targy>
+        <idopont>
+            <nap>hétfő</nap>
+            <tol>08:00:00</tol>
+            <ig>09:50:00</ig>
+        </idopont>
+        <helyszin>III.</helyszin>
+        <oktato>Szabó Norbert István</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEVEE050-B2-2" tipus="gyakorlat">
+        <targy>Elektrotechnika-elektronika</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>14:00:00</tol>
+            <ig>15:50:00</ig>
+        </idopont>
+        <helyszin>A1/227</helyszin>
+        <oktato>Jobbágy Marcell</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEIAK130-B2-1" tipus="elmelet">
+        <targy>Mesterséges intelligencia alapok</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>12:00:00</tol>
+            <ig>14:00:00</ig>
+        </idopont>
+        <helyszin>XXXII.</helyszin>
+        <oktato>Fazekas Levente Áron</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEIAK130-B2-2" tipus="gyakorlat">
+        <targy>Mesterséges intelligencia alapok</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>10:00:00</tol>
+            <ig>12:00:00</ig>
+        </idopont>
+        <helyszin>XXXII.</helyszin>
+        <oktato>Fazekas Levente Áron</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEIAL335-B2-1" tipus="elmelet">
+        <targy>Mobil programozási alapok</targy>
+        <idopont>
+            <nap>hétfő</nap>
+            <tol>16:00:00</tol>
+            <ig>18:00:00</ig>
+        </idopont>
+        <helyszin>In101</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEIAL335-B2-2" tipus="gyakorlat">
+        <targy>Mobil programozási alapok</targy>
+        <idopont>
+            <nap>hétfő</nap>
+            <tol>18:00:00</tol>
+            <ig>20:00:00</ig>
+        </idopont>
+        <helyszin>In101</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEIAL331-B2-1" tipus="elmelet">
+        <targy>Web technológiák 1.</targy>
+        <idopont>
+            <nap>hétfő</nap>
+            <tol>10:00:00</tol>
+            <ig>12:00:00</ig>
+        </idopont>
+        <helyszin>V.</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEIAL331-B2-2" tipus="gyakorlat">
+        <targy>Web technológiák 1.</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>12:00:00</tol>
+            <ig>14:00:00</ig>
+        </idopont>
+        <helyszin>In101</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEIAL32K-B2-1" tipus="elmelet">
+        <targy>Webes adatkezelő környezetek</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>08:00:00</tol>
+            <ig>10:00:00</ig>
+        </idopont>
+        <helyszin>A1/310</helyszin>
+        <oktato>Dr. Kovács László József</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEIAL32K-B2-2" tipus="gyakorlat">
+        <targy>Webes adatkezelő környezetek</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>10:00:00</tol>
+            <ig>12:00:00</ig>
+        </idopont>
+        <helyszin>In103</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEIAL30A-B2-1" tipus="elmelet">
+        <targy>Windows rendszergazda</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>16:00:00</tol>
+            <ig>18:00:00</ig>
+        </idopont>
+        <helyszin>In103</helyszin>
+        <oktato>Dr. Wagner György</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+    <ora id="GEIAL30A-B2-2" tipus="gyakorlat">
+        <targy>Windows rendszergazda</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>08:00:00</tol>
+            <ig>10:00:00</ig>
+        </idopont>
+        <helyszin>In103</helyszin>
+        <oktato>Dr. Wagner György</oktato>
+        <szak>Mérnökinformatikus</szak>
+    </ora>
+
+</XY_Orarend>
