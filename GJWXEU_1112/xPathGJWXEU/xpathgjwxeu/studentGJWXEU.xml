@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<class xmlns:xs="http://www.w3.org/2001/XMLSchema" xs:noNamespaceSchemaLocation="studentGJWXEU.xsd">
+    <student id="01">
+        <ketesztnev>Pál</ketesztnev>
+        <vezeteknev>Kiss</vezeteknev>
+        <becenev>Pali</becenev>
+        <kor>32</kor>
+    </student>
+
+    <student id="02">
+        <ketesztnev>Piroska</ketesztnev>
+        <vezeteknev>Vigh</vezeteknev>
+        <becenev>Piri</becenev>
+        <kor>55</kor>
+    </student>
+    
+    <student id="03">
+        <ketesztnev>Ferenc</ketesztnev>
+        <vezeteknev>Nagy</vezeteknev>
+        <becenev>Feri</becenev>
+        <kor>45</kor>
+    </student>
+</class>
