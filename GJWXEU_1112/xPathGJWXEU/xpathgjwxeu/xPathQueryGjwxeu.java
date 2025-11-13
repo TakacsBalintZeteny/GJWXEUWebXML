@@ -22,10 +22,7 @@ public class xPathQueryGjwxeu {
     public static void main(String argv[]) throws SAXException,
     IOException, ParserConfigurationException
     {
-        System.out.println("h");
-        
-
-        File inputFile = new File("C:\\Users\\au093090\\Desktop\\GJWXEU_1112\\xPathGJWXEU\\xpathgjwxeu\\studentGJWXEU.xml");
+        File inputFile = new File("C:\Users\Takács Bálint\Desktop\Egyetem\2025-2026 I.félév\Webes adakezelés\Gyakorlat\GJWXEU_1112\xPathGJWXEU\xpathgjwxeu\\studentGJWXEU.xml");
 
         DocumentBuilderFactory docfactory = DocumentBuilderFactory.newInstance();
 
@@ -38,7 +35,18 @@ public class xPathQueryGjwxeu {
         //az XPath készítése
         XPath xPath = XPathFactory.newInstance().newXPath();
 
-        String gjwxeu = "s";
+        //String gjwxeu = "/class/student";
+        //String gjwxeu = "//student[@id='02']";
+        //String gjwxeu = "//student";
+        //String gjwxeu = "/class/student[2]";
+        //String gjwxeu = "/class/student[last()]";
+        //String gjwxeu = "/class/student[last()-1]";
+        //String gjwxeu = "/root/student[position()<=2]";
+        //String gjwxeu = "/class/*";
+        //String gjwxeu = "//student[@*]";
+        //String gjwxeu = "//*";
+        //String gjwxeu = "/class/student[kor>20]";
+        //String gjwxeu = "//student/keresztnev | //student/vezeteknev";
 
         NodeList Gjewxeu = (NodeList) xPath.compile(gjwxeu).evaluate(doc, XPathConstants.NODESET);
 
@@ -62,7 +70,5 @@ public class xPathQueryGjwxeu {
                 System.out.println("Hallgató kor: " + element.getElementsByTagName("kor").item(0).getTextContent());
             }
         }
-
-        
     }
 }
