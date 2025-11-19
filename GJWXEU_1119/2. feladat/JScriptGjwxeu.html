@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+
+    <style>
+        * {
+            margin: 5px 5px 5px 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Neptunkód Órarend 2025</h1>
+
+    <button id="gomb">Órarend betöltése</button>
+    <div id="tartalom"></div>
+
+    <script>
+        document.getElementById('gomb').addEventListener('click', () => {
+            fetch('orarendGjwxeu.json')
+                .then(response => response.json())
+                .then(data => {
+
+                    const tartalomDiv = document.getElementById('tartalom');
+                    tartalomDiv.innerHTML = '';
+
+                    const orak = data.GJWXEU_orarend.ora;
+
+                    orak.forEach(ora => {
+
+                        tartalomDiv.innerHTML += `
+                            <p><span style="color: blue;">Tárgy:</span> ${ora.targy}</p>
+                            <p>Nap: ${ora.idopont.nap}</p>
+                            <p>Időpont: ${ora.idopont.tol} - ${ora.idopont.ig}</p>
+                            <p>Helyszín: ${ora.helyszin}</p>
+                            <p>Oktató: ${ora.oktato}</p>
+                            <p>Szak: ${ora.szak}</p>
+                            <hr>
+                        `;
+
+                    });
+                })
+                .catch(err => console.error('Hiba a JSON betöltésekor:', err));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "GJWXEU Órarend",
+    "type": "object",
+    "properties": {
+        "GJWXEU_orarend": {
+            "type": "object",
+            "properties": {
+                "ora": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "targy": {
+                                "type": "string",
+                                "minLength" : 1
+                            },
+                            "idopont": {
+                                "type": "object",
+                                "properties": {
+                                    "nap": {
+                                        "type": "string",
+                                        "enum": ["Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat", "Vasárnap"]
+                                    },
+                                    "tol": {
+                                        "type": "integer",
+                                        "minimum": 0,
+                                        "maximum": 24
+                                    },
+                                    "ig": {
+                                        "type": "integer",
+                                        "minimum": 0,
+                                        "maximum": 24
+                                    }
+                                },
+                                "required": ["nap", "tol", "ig"]
+                            },
+                            "helyszin": {
+                                "type": "string",
+                                "minLength" : 5
+                            },
+                            "oktato": {
+                                "type": "string",
+                                "minLength" : 5
+                            },
+                            "szak": {
+                                "type": "string",
+                                "minLength" : 5
+                            }
+                        },
+                        "required": ["targy", "idopont", "helyszin", "oktato", "szak"]
+                    }
+                }
+            },
+            "required": ["ora"]
+        }
+    },
+    "required": ["GJWXEU_orarend"]
+}

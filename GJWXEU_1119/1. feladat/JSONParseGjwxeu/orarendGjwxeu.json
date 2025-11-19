@@ -1,0 +1,72 @@
+{
+    "GJWXEU_orarend" : {
+        "ora" : [
+            {
+                "targy": "Elektrotechnika és elektronika",
+                "idopont": {
+                    "nap": "hétfő",
+                    "tol": 8,
+                    "ig": 10
+                },
+                "helyszin": "III. előadó",
+                "oktato": "Szabó Norbert",
+                "szak": "Mérnökinformatikus"
+            },
+            {
+                "targy": "Windows rendszedrgazda",
+                "idopont": {
+                    "nap": "kedd",
+                    "tol": 8,
+                    "ig": 10
+                },
+                "helyszin": "In/103.",
+                "oktato": "Wagner György",
+                "szak": "Mérnökinformatikus"
+            },
+            {
+                "targy": "Web technológiák I.",
+                "idopont": {
+                    "nap": "hétfő",
+                    "tol": 10,
+                    "ig": 12
+                },
+                "helyszin": "V. előadó",
+                "oktato": "Agárdi Anita",
+                "szak": "Mérnökinformatikus"
+            },
+            {
+                "targy": "Mobil programozás",
+                "idopont": {
+                    "nap": "hétfő",
+                    "tol": 16,
+                    "ig": 18
+                },
+                "helyszin": "In/103.",
+                "oktato": "Agárdi Anita",
+                "szak": "Mérnökinformatikus"
+            },
+            {
+                "targy": "Webes adatkezelés",
+                "idopont": {
+                    "nap": "Szerda",
+                    "tol": 8,
+                    "ig": 10
+                },
+                "helyszin": "In/202.",
+                "oktato": "Kovács László",
+                "szak": "Mérnökinformatikus"
+            },
+            {
+                "targy": "Mesterséges intelligenciák",
+                "idopont": {
+                    "nap": "Kedd",
+                    "tol": 10,
+                    "ig": 12
+                },
+                "helyszin": "XXXII. előadó",
+                "oktato": "Kunné Judit",
+                "szak": "Mérnökinformatikus"
+            }
+        ]
+    }
+}
