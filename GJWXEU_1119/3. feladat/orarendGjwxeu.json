@@ -4,7 +4,7 @@
             {
                 "targy": "Elektrotechnika és elektronika",
                 "idopont": {
-                    "nap": "hétfő",
+                    "nap": "Hétfő",
                     "tol": 8,
                     "ig": 10
                 },
@@ -15,7 +15,7 @@
             {
                 "targy": "Windows rendszedrgazda",
                 "idopont": {
-                    "nap": "kedd",
+                    "nap": "Kedd",
                     "tol": 8,
                     "ig": 10
                 },
@@ -26,7 +26,7 @@
             {
                 "targy": "Web technológiák I.",
                 "idopont": {
-                    "nap": "hétfő",
+                    "nap": "Hétfő",
                     "tol": 10,
                     "ig": 12
                 },
@@ -37,7 +37,7 @@
             {
                 "targy": "Mobil programozás",
                 "idopont": {
-                    "nap": "hétfő",
+                    "nap": "Hétfő",
                     "tol": 16,
                     "ig": 18
                 },
