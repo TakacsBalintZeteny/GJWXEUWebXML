@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GJWXEU_Szerviz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Gjwxeu_XMLSchema.xsd">
+
+    <!-- Ügyfelek -->
+     <ügyfél ügyfél_Id="ü1">
+        <név>
+            <keresztnév>István</keresztnév>
+            <vezetéknév>Kiss</vezetéknév>
+        </név>
+        <cím>
+            <város>Miskolc</város>
+            <utca>Valamilyen</utca>
+            <házszám>5</házszám>
+        </cím>
+        <telefonszám>06201234562</telefonszám>
+        <telefonszám>06301234561</telefonszám>
+        <életkor>45</életkor>
+     </ügyfél>
+
+     <ügyfél ügyfél_Id="ü2">
+        <név>
+            <keresztnév>János</keresztnév>
+            <vezetéknév>Szabó</vezetéknév>
+        </név>
+        <cím>
+            <város>Ózd</város>
+            <utca>Szép</utca>
+            <házszám>43</házszám>
+        </cím>
+        <telefonszám>06701234568</telefonszám>
+        <telefonszám>06301234569</telefonszám>
+        <életkor>30</életkor>
+     </ügyfél>
+
+
+     <!-- Autók -->
+      <autó autó_Id="au1" ü_au="ü1">
+        <márka>Ford</márka>
+        <tipus>Focus</tipus>
+        <évjárat>2005</évjárat>
+        <motor>1.6 benzin</motor>
+        <alvázszám>1FAHP3FN5AW155957</alvázszám>
+      </autó>
+
+      <autó autó_Id="au2" ü_au="ü2">
+        <márka>Audi</márka>
+        <tipus>Q5</tipus>
+        <évjárat>2019</évjárat>
+        <motor>3.0 benzin</motor>
+        <alvázszám>1GNFC13J67J299954</alvázszám>
+      </autó>
+
+
+      <!-- Javítások -->
+       <javítás javítás_Id="j1" au_j="au1">
+            <ára>35000</ára>
+            <időhossz>120</időhossz>
+            <hiba>szennyezett olaj</hiba>
+            <hiba>piszkos olajszűrő</hiba>
+            <dátum>2024-07-15</dátum>
+       </javítás>
+
+        <javítás javítás_Id="j2" au_j="au2">
+            <ára>120000</ára>
+            <időhossz>240</időhossz>
+            <hiba>nem fog a kuplung</hiba>
+            <hiba>csörög a kinyomócsapágy</hiba>
+            <dátum>2025-08-25</dátum>
+       </javítás>
+
+        <javítás javítás_Id="j3" au_j="au1">
+            <ára>37000</ára>
+            <időhossz>110</időhossz>
+            <hiba>szennyezett olaj</hiba>
+            <hiba>piszkos olajszűrő</hiba>
+            <dátum>2025-07-15</dátum>
+       </javítás>
+
+
+       <!-- Szerelők -->
+        <szerelő szerelő_Id="sz1">
+            <név>
+                <keresztnév>Sándor</keresztnév>
+                <vezetéknév>Petőfi</vezetéknév>
+            </név>
+            <életkor>50</életkor>
+            <végzettség>szakközépiskola</végzettség>
+            <végzettség>OKJ-s tanfolyam</végzettség>
+        </szerelő>
+
+        <szerelő szerelő_Id="sz2">
+            <név>
+                <keresztnév>János</keresztnév>
+                <vezetéknév>Arany</vezetéknév>
+            </név>
+            <életkor>25</életkor>
+            <végzettség>szakközépiskola</végzettség>
+            <végzettség>tanfolyam</végzettség>
+            <végzettség>főiskola</végzettség>
+        </szerelő>
+ 
+
+        <!-- Alkatrészek -->
+         <alkatrész alkatrész_Id="al1">
+            <név>motorolaj</név>
+            <cikkszám>2423424312</cikkszám>
+            <minőség>magas</minőség>
+            <ár>15000</ár>
+         </alkatrész>
+
+         <alkatrész alkatrész_Id="al2">
+            <név>olajszűrő</név>
+            <cikkszám>2423544537</cikkszám>
+            <minőség>magas</minőség>
+            <ár>5000</ár>
+         </alkatrész>
+
+         <alkatrész alkatrész_Id="al3">
+            <név>kuplung szett</név>
+            <cikkszám>5652345764</cikkszám>
+            <minőség>közepes</minőség>
+            <ár>80000</ár>
+         </alkatrész>
+
+
+        <!-- Végzik, a javítást és a szerelőt összekötés-->
+         <végzi j_v="j1" sz_v="sz1">
+            <munkaórák>2</munkaórák>
+            <feladat>olaj csere</feladat>
+        </végzi>
+
+        <végzi j_v="j2" sz_v="sz1">
+            <munkaórák>4</munkaórák>
+            <feladat>kuplung csere</feladat>
+        </végzi>
+
+        <végzi j_v="j2" sz_v="sz2">
+            <munkaórák>4</munkaórák>
+            <feladat>kuplung csere</feladat>
+        </végzi>
+
+        <végzi j_v="j3" sz_v="sz1">
+            <munkaórák>2</munkaórák>
+            <feladat>olaj csere</feladat>
+        </végzi>
+
+
+         <!-- Felhasználás, a javítás és az alkatrész összekötése -->
+          <felhasznál j_f="j1" al_f="al1">
+                <mennyiség>1</mennyiség>
+          </felhasznál>
+
+          <felhasznál j_f="j1" al_f="al2">
+                <mennyiség>1</mennyiség>
+          </felhasznál>
+
+          <felhasznál j_f="j2" al_f="al3">
+                <mennyiség>1</mennyiség>
+          </felhasznál>
+
+          <felhasznál j_f="j3" al_f="al1">
+                <mennyiség>1</mennyiség>
+          </felhasznál>
+
+          <felhasznál j_f="j3" al_f="al2">
+                <mennyiség>1</mennyiség>
+          </felhasznál>
+
+</GJWXEU_Szerviz>

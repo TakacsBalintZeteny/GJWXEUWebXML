@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="GJWXEU_Szerviz">
+
+        <!-- Egyszerű típusok -->
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ügyfél" type="ügyfélTipus" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                <xs:element name="autó" type="autóTipus" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                <xs:element name="javítás" type="javításTipus" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                <xs:element name="szerelő" type="szerelőTipus" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                <xs:element name="alkatrész" type="alkatrészTipus" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                <xs:element name="végzi" type="végziTipus" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                <xs:element name="felhasznál" type="felhasználTipus" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+        <!-- Kulcsok -->
+         <xs:key name="ügyfél_kulcs">
+            <xs:selector xpath="ügyfél"></xs:selector>
+            <xs:field xpath="@ügyfél_Id"></xs:field>
+         </xs:key>
+
+         <xs:key name="autó_kulcs">
+            <xs:selector xpath="autó"></xs:selector>
+            <xs:field xpath="@autó_Id"></xs:field>
+         </xs:key>
+
+         <xs:key name="javítás_kulcs">
+            <xs:selector xpath="javítás"></xs:selector>
+            <xs:field xpath="@javítás_Id"></xs:field>
+         </xs:key>
+
+         <xs:key name="szerelő_kulcs">
+            <xs:selector xpath="szerelő"></xs:selector>
+            <xs:field xpath="@szerelő_Id"></xs:field>
+         </xs:key>
+
+         <xs:key name="alkatrész_kulcs">
+            <xs:selector xpath="alkatrész"></xs:selector>
+            <xs:field xpath="@alkatrész_Id"></xs:field>
+         </xs:key>
+
+         <!-- Idegen kulcsok -->
+          <xs:keyref refer="ügyfél_kulcs" name="ügyfél_autó_idegen_kulcs">
+                <xs:selector xpath="autó"></xs:selector>
+                <xs:field xpath="@ü_au"></xs:field>
+          </xs:keyref>
+
+          <xs:unique name="egy_auto_per_tulaj"> <!-- 1:1 kapcsolat-->
+            <xs:selector xpath="autó"></xs:selector>
+            <xs:field xpath="@ü_au"></xs:field>
+          </xs:unique>
+
+          <xs:keyref refer="autó_kulcs" name="autó_javítás_idegen_kulcs">
+                <xs:selector xpath="javítás"></xs:selector>
+                <xs:field xpath="@au_j"></xs:field>
+          </xs:keyref>
+
+          <xs:keyref refer="javítás_kulcs" name="javítás_végzi_idegen_kulcs">
+                <xs:selector xpath="végzi"></xs:selector>
+                <xs:field xpath="@j_v"></xs:field>
+          </xs:keyref>
+
+          <xs:keyref refer="szerelő_kulcs" name="szerelő_végzi_idegen_kulcs">
+                <xs:selector xpath="végzi"></xs:selector>
+                <xs:field xpath="@sz_v"></xs:field>
+          </xs:keyref>
+
+          <xs:keyref refer="javítás_kulcs" name="javítás_felhasznál_idegen_kulcs">
+                <xs:selector xpath="felhasznál"></xs:selector>
+                <xs:field xpath="@j_f"></xs:field>
+          </xs:keyref>
+
+          <xs:keyref refer="alkatrész_kulcs" name="alkatrész_felhasznál_idegen_kulcs">
+                <xs:selector xpath="felhasznál"></xs:selector>
+                <xs:field xpath="@al_f"></xs:field>
+          </xs:keyref>
+
+    </xs:element>
+
+    <!-- Saját típusok (komplex) -->
+     <xs:simpleType name="életkorTipus">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"></xs:minInclusive>
+            <xs:maxInclusive value="150"></xs:maxInclusive>
+        </xs:restriction>
+     </xs:simpleType>
+
+     <xs:simpleType name="évjáratTipus">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1900"></xs:minInclusive>
+            <xs:maxInclusive value="2100"></xs:maxInclusive>
+        </xs:restriction>
+     </xs:simpleType>
+
+     <xs:simpleType name="minőségTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="magas"></xs:enumeration>
+            <xs:enumeration value="közepes"></xs:enumeration>
+            <xs:enumeration value="alacsony"></xs:enumeration>
+        </xs:restriction>
+     </xs:simpleType>
+
+
+    <xs:complexType name="névTipus">
+        <xs:sequence>
+            <xs:element name="keresztnév" type="xs:string"></xs:element>
+            <xs:element name="vezetéknév" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="címTipus">
+        <xs:sequence>
+            <xs:element name="város" type="xs:string"></xs:element>
+            <xs:element name="utca" type="xs:string"></xs:element>
+            <xs:element name="házszám" type="xs:positiveInteger"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+     <xs:complexType name="ügyfélTipus">
+        <xs:sequence>
+            <xs:element name="név" type="névTipus"></xs:element>
+            <xs:element name="cím" type="címTipus"></xs:element>
+            <xs:element name="telefonszám" type="xs:string" maxOccurs="unbounded"></xs:element>
+            <xs:element name="életkor" type="életkorTipus"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="ügyfél_Id" type="xs:string" use="required"></xs:attribute>
+     </xs:complexType>
+
+
+     <xs:complexType name="autóTipus">
+        <xs:sequence>
+            <xs:element name="márka" type="xs:string"></xs:element>
+            <xs:element name="tipus" type="xs:string"></xs:element>
+            <xs:element name="évjárat" type="évjáratTipus"></xs:element>
+            <xs:element name="motor" type="xs:string"></xs:element>
+            <xs:element name="alvázszám" type="xs:string"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="autó_Id" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="ü_au" type="xs:string" use="required"></xs:attribute>
+     </xs:complexType>
+
+     <xs:complexType name="javításTipus">
+        <xs:sequence>
+            <xs:element name="ára" type="xs:positiveInteger"></xs:element>
+            <xs:element name="időhossz" type="xs:positiveInteger"></xs:element>
+            <xs:element name="hiba" type="xs:string" maxOccurs="unbounded"></xs:element>
+            <xs:element name="dátum" type="xs:date"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="javítás_Id" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="au_j" type="xs:string" use="required"></xs:attribute>
+     </xs:complexType>
+
+     <xs:complexType name="szerelőTipus">
+        <xs:sequence>
+            <xs:element name="név" type="névTipus"></xs:element>
+            <xs:element name="életkor" type="életkorTipus"></xs:element>
+            <xs:element name="végzettség" type="xs:string" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="szerelő_Id" type="xs:string" use="required"></xs:attribute>
+     </xs:complexType>
+
+     <xs:complexType name="alkatrészTipus">
+        <xs:sequence>
+            <xs:element name="név" type="xs:string"></xs:element>
+            <xs:element name="cikkszám" type="xs:string"></xs:element>
+            <xs:element name="minőség" type="minőségTipus"></xs:element>
+            <xs:element name="ár" type="xs:positiveInteger"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="alkatrész_Id" type="xs:string" use="required"></xs:attribute>
+     </xs:complexType>
+
+     <xs:complexType name="végziTipus">
+        <xs:sequence>
+            <xs:element name="munkaórák" type="xs:positiveInteger"></xs:element>
+            <xs:element name="feladat" type="xs:string" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="j_v" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="sz_v" type="xs:string" use="required"></xs:attribute>
+     </xs:complexType>
+
+     <xs:complexType name="felhasználTipus">
+        <xs:sequence>
+            <xs:element name="mennyiség" type="xs:positiveInteger"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="j_f" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="al_f" type="xs:string" use="required"></xs:attribute>
+     </xs:complexType>
+</xs:schema>

@@ -1,0 +1,119 @@
+Aktuális elem: ügyfél
+Ügyfél telefonszáma: 06201234562
+Ügyfél telefonszáma: 06301234561
+Ügyfél id: ü1
+Ügyfél életkora: 45
+Aktuális elem: ügyfél
+Ügyfél telefonszáma: 06701234568
+Ügyfél telefonszáma: 06301234569
+Ügyfél id: ü2
+Ügyfél életkora: 30
+Aktuális elem: autó
+Autó id: au1
+Autó FK: ü1
+Autó márkája: Ford
+Autó tipusa: Focus
+Autó évjárata: 2005
+Autó motorja: 1.6 benzin
+Autó alvázszáma: 1FAHP3FN5AW155957
+Aktuális elem: autó
+Autó id: au2
+Autó FK: ü2
+Autó márkája: Audi
+Autó tipusa: Q5
+Autó évjárata: 2019
+Autó motorja: 3.0 benzin
+Autó alvázszáma: 1GNFC13J67J299954
+Aktuális elem: javítás
+Javítás hibája: szennyezett olaj
+Javítás hibája: piszkos olajszűrő
+Javítás id: 
+Javítás FK: au1
+Javítás ára: 35000
+Javítás időhossza: 120
+Javítás dátuma: 2024-07-15
+Aktuális elem: javítás
+Javítás hibája: nem fog a kuplung
+Javítás hibája: csörög a kinyomócsapágy
+Javítás id: 
+Javítás FK: au2
+Javítás ára: 120000
+Javítás időhossza: 240
+Javítás dátuma: 2025-08-25
+Aktuális elem: javítás
+Javítás hibája: szennyezett olaj
+Javítás hibája: piszkos olajszűrő
+Javítás id: 
+Javítás FK: au1
+Javítás ára: 37000
+Javítás időhossza: 110
+Javítás dátuma: 2025-07-15
+Aktuális elem: szerelő
+Szerelő végzettsége: szakközépiskola
+Szerelő végzettsége: OKJ-s tanfolyam
+Szerelo id: sz1
+Szerelő életkora: 50
+Aktuális elem: szerelő
+Szerelő végzettsége: szakközépiskola
+Szerelő végzettsége: tanfolyam
+Szerelő végzettsége: főiskola
+Szerelo id: sz2
+Szerelő életkora: 25
+Aktuális elem: alkatrész
+Alkatrész id: al1
+Alkatrész név: motorolaj
+Alkatrész cikkszám: 2423424312
+Alkatrész minőség: magas
+Alaktrész ár: 15000
+Aktuális elem: alkatrész
+Alkatrész id: al2
+Alkatrész név: olajszűrő
+Alkatrész cikkszám: 2423544537
+Alkatrész minőség: magas
+Alaktrész ár: 5000
+Aktuális elem: alkatrész
+Alkatrész id: al3
+Alkatrész név: kuplung szett
+Alkatrész cikkszám: 5652345764
+Alkatrész minőség: közepes
+Alaktrész ár: 80000
+Aktuális elem: végzi
+Végzés FK j_v: j1
+Végzés FK sz_v: sz1
+Végzés munkaórái: 2
+Végzés feladata: olaj csere
+Aktuális elem: végzi
+Végzés FK j_v: j2
+Végzés FK sz_v: sz1
+Végzés munkaórái: 4
+Végzés feladata: kuplung csere
+Aktuális elem: végzi
+Végzés FK j_v: j2
+Végzés FK sz_v: sz2
+Végzés munkaórái: 4
+Végzés feladata: kuplung csere
+Aktuális elem: végzi
+Végzés FK j_v: j3
+Végzés FK sz_v: sz1
+Végzés munkaórái: 2
+Végzés feladata: olaj csere
+Aktuális elem: felhasznál
+Felhasználás FK j_f: j1
+Felhasználás FK al_f: al1
+Felhasznált alkatrészek mennyisége: 1
+Aktuális elem: felhasznál
+Felhasználás FK j_f: j1
+Felhasználás FK al_f: al2
+Felhasznált alkatrészek mennyisége: 1
+Aktuális elem: felhasznál
+Felhasználás FK j_f: j2
+Felhasználás FK al_f: al3
+Felhasznált alkatrészek mennyisége: 1
+Aktuális elem: felhasznál
+Felhasználás FK j_f: j3
+Felhasználás FK al_f: al1
+Felhasznált alkatrészek mennyisége: 1
+Aktuális elem: felhasznál
+Felhasználás FK j_f: j3
+Felhasználás FK al_f: al2
+Felhasznált alkatrészek mennyisége: 1
