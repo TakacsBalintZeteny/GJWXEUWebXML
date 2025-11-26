@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="hallgatoGJWXEU.xsl"?>
+<class>
+    <student id="01">
+        <keresztnev>Pál</keresztnev>
+        <vezeteknev>Kiss</vezeteknev>
+        <becenev>Pali</becenev>
+        <kor>32</kor>
+        <osztondij>25000</osztondij>
+    </student>
+
+    <student id="02">
+        <keresztnev>Piroska</keresztnev>
+        <vezeteknev>Vigh</vezeteknev>
+        <becenev>Piri</becenev>
+        <kor>55</kor>
+        <osztondij>35000</osztondij>
+    </student>
+    
+    <student id="03">
+        <keresztnev>Ferenc</keresztnev>
+        <vezeteknev>Nagy</vezeteknev>
+        <becenev>Feri</becenev>
+        <kor>45</kor>
+        <osztondij>10000</osztondij>
+    </student>
+</class>
