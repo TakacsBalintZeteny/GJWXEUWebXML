@@ -1,0 +1,177 @@
+{
+	"XY_Orarend": {
+		"ora": [
+			{
+				"targy": "Angol műszaki szaknyelv 1.",
+				"idopont": {
+					"nap": "hétfő",
+					"tol": "12:00:00",
+					"ig": "14:00:00"
+				},
+				"helyszin": "valahol",
+				"oktato": "valaki",
+				"szak": "Mérnökinformatikus",
+				"_id": "MEIOKMUSZAN1",
+				"_tipus": "gyakorlat"
+			},
+			{
+				"targy": "Elektrotechnika-elektronika",
+				"idopont": {
+					"nap": "hétfő",
+					"tol": "08:00:00",
+					"ig": "09:50:00"
+				},
+				"helyszin": "III.",
+				"oktato": "Szabó Norbert István",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEVEE050-B2-1",
+				"_tipus": "elmelet"
+			},
+			{
+				"targy": "Elektrotechnika-elektronika",
+				"idopont": {
+					"nap": "szerda",
+					"tol": "14:00:00",
+					"ig": "15:50:00"
+				},
+				"helyszin": "A1/227",
+				"oktato": "Jobbágy Marcell",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEVEE050-B2-2",
+				"_tipus": "gyakorlat"
+			},
+			{
+				"targy": "Mesterséges intelligencia alapok",
+				"idopont": {
+					"nap": "kedd",
+					"tol": "12:00:00",
+					"ig": "14:00:00"
+				},
+				"helyszin": "XXXII.",
+				"oktato": "Fazekas Levente Áron",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEIAK130-B2-1",
+				"_tipus": "elmelet"
+			},
+			{
+				"targy": "Mesterséges intelligencia alapok",
+				"idopont": {
+					"nap": "kedd",
+					"tol": "10:00:00",
+					"ig": "12:00:00"
+				},
+				"helyszin": "XXXII.",
+				"oktato": "Fazekas Levente Áron",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEIAK130-B2-2",
+				"_tipus": "gyakorlat"
+			},
+			{
+				"targy": "Mobil programozási alapok",
+				"idopont": {
+					"nap": "hétfő",
+					"tol": "16:00:00",
+					"ig": "18:00:00"
+				},
+				"helyszin": "In101",
+				"oktato": "Dr. Agárdi Anita",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEIAL335-B2-1",
+				"_tipus": "elmelet"
+			},
+			{
+				"targy": "Mobil programozási alapok",
+				"idopont": {
+					"nap": "hétfő",
+					"tol": "18:00:00",
+					"ig": "20:00:00"
+				},
+				"helyszin": "In101",
+				"oktato": "Dr. Agárdi Anita",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEIAL335-B2-2",
+				"_tipus": "gyakorlat"
+			},
+			{
+				"targy": "Web technológiák 1.",
+				"idopont": {
+					"nap": "hétfő",
+					"tol": "10:00:00",
+					"ig": "12:00:00"
+				},
+				"helyszin": "V.",
+				"oktato": "Dr. Agárdi Anita",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEIAL331-B2-1",
+				"_tipus": "elmelet"
+			},
+			{
+				"targy": "Web technológiák 1.",
+				"idopont": {
+					"nap": "szerda",
+					"tol": "12:00:00",
+					"ig": "14:00:00"
+				},
+				"helyszin": "In101",
+				"oktato": "Dr. Bednarik László",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEIAL331-B2-2",
+				"_tipus": "gyakorlat"
+			},
+			{
+				"targy": "Webes adatkezelő környezetek",
+				"idopont": {
+					"nap": "szerda",
+					"tol": "08:00:00",
+					"ig": "10:00:00"
+				},
+				"helyszin": "A1/310",
+				"oktato": "Dr. Kovács László József",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEIAL32K-B2-1",
+				"_tipus": "elmelet"
+			},
+			{
+				"targy": "Webes adatkezelő környezetek",
+				"idopont": {
+					"nap": "szerda",
+					"tol": "10:00:00",
+					"ig": "12:00:00"
+				},
+				"helyszin": "In103",
+				"oktato": "Dr. Bednarik László",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEIAL32K-B2-2",
+				"_tipus": "gyakorlat"
+			},
+			{
+				"targy": "Windows rendszergazda",
+				"idopont": {
+					"nap": "kedd",
+					"tol": "16:00:00",
+					"ig": "18:00:00"
+				},
+				"helyszin": "In103",
+				"oktato": "Dr. Wagner György",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEIAL30A-B2-1",
+				"_tipus": "elmelet"
+			},
+			{
+				"targy": "Windows rendszergazda",
+				"idopont": {
+					"nap": "kedd",
+					"tol": "08:00:00",
+					"ig": "10:00:00"
+				},
+				"helyszin": "In103",
+				"oktato": "Dr. Wagner György",
+				"szak": "Mérnökinformatikus",
+				"_id": "GEIAL30A-B2-2",
+				"_tipus": "gyakorlat"
+			}
+		],
+		"_xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+		"_xs:noNamespaceSchemaLocation": "Gjwxeu_orarend.xsd"
+	}
+}
