@@ -15,7 +15,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
 
-public class GjwxeuDomRead {
+public class GjwxeuDOMRead {
 	public static void main(String argv[]) throws SAXException,
 	IOException, ParserConfigurationException
 	{
@@ -321,3 +321,4 @@ public class GjwxeuDomRead {
 		writer.close();
 	}
 }
+
